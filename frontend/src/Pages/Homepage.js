@@ -1,16 +1,25 @@
-import React,{useEffect} from 'react' 
-import { Container,Box,Text,TabList,Tab,TabPanels,TabPanel,Tabs } from '@chakra-ui/react'
+import {
+  Box,
+  Container,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
+} from "@chakra-ui/react";
+import { useEffect } from "react";
+import { useHistory } from "react-router";
+import Login from "../components/Authentication/Login";
+import Signup from "../components/Authentication/Signup";
 
-import Login from '../components/Authentication/Login';
-import Signup from '../components/Authentication/Signup';
-import { useHistory } from 'react-router-dom';
-const Homepage = () => {
-
+function Homepage() {
   const history = useHistory();
-  useEffect(() => {
-      const user = JSON.parse(localStorage.getItem('userInfo'));
 
-      if(user) history.push('/chats');
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+
+    if (user) history.push("/chats");
   }, [history]);
 
   return (
