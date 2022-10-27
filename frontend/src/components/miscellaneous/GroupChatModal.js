@@ -1,4 +1,4 @@
-import { 
+import {
   Modal,
   ModalOverlay,
   ModalContent,
@@ -151,7 +151,7 @@ const GroupChatModal = ({ children }) => {
             </FormControl>
             <FormControl>
               <Input
-                placeholder="Add Users eg: John, Suv, Mayank"
+                placeholder="Add Users eg: John, Piyush, Jane"
                 mb={1}
                 onChange={(e) => handleSearch(e.target.value)}
               />
